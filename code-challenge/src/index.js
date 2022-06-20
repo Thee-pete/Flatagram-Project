@@ -15,7 +15,7 @@ function doAll(){
     displayImageAndDetails()
     hideImage()
     changeDog()
-    updateLikes()
+  
     
 }
 
