@@ -1,24 +1,12 @@
 // write your code here
-document.addEventListener('DOMContentLoaded', function() {
-    
-    doAll()
-  
-});
-   
+
 let imgTitle = document.getElementById('card-title')
 let imgSrc = document.getElementById('card-image')
 let imgLikesCount = document.getElementById('like-count')
 let imgCommentList = document.getElementById('comments-list')
 
 
-function doAll(){
-    displayImageAndDetails()
-    hideImage()
-    changeDog()
-  
-    
-}
-
+//Getting the image, title and the comments (GET METHOD)
 
 function displayImageAndDetails(){
     const imageDetails = fetch ("http://localhost:3000/images/1")
@@ -26,6 +14,8 @@ function displayImageAndDetails(){
     .then(data => renderImageAndDetails(data))
     return imageDetails
 }
+displayImageAndDetails()
+
 
 function renderImageAndDetails(imageDetails){
         imgTitle.textContent = imageDetails.title;
@@ -43,6 +33,11 @@ function fetchComments(commentsArray){
     })
        
 }
+
+
+
+// Hiding the image after clicking on the title
+
 function hideImage(){
     document.getElementById('card-title').addEventListener('click', ()=> {
         let cardImg = document.getElementById('card-image')
@@ -51,8 +46,15 @@ function hideImage(){
           } else {
             cardImg.style.display = "none";
           }
+
+
+
     })
 }
+hideImage()
+
+// Changing the image of the dog after clicking on the image
+
 function changeDog(){
     document.getElementById('card-image').addEventListener('click', () =>{
         fetch ("https://dog.ceo/api/breeds/image/random")
@@ -74,6 +76,9 @@ function changeDog(){
        
     })
 }
+changeDog()
+
+
 
 
 
