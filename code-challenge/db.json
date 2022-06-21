@@ -4,7 +4,8 @@
       "id": 1,
       "title": "Woofing those bugs away",
       "likes": 0,
-      "image": "./assets/coder-dog.png"
+      "image": "./assets/coder-dog.png",
+      "name": "https://dog.ceo/api/breeds/image/random"
     }
   ],
   "comments": [
@@ -22,16 +23,6 @@
       "id": 3,
       "imageId": 1,
       "content": "Woof!"
-    },
-    {
-      "imageId": 1,
-      "content": "this is cool",
-      "id": 4
-    },
-    {
-      "imageId": 1,
-      "content": "I love to eat",
-      "id": 5
     }
   ]
 }

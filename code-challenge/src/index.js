@@ -1,11 +1,5 @@
 // write your code here
-
-
-// like button 
-
-
-
-//  comment 
+//  comment section
 const ul = document.querySelector('#comments-list');
 const commentSection = ()=>{
     fetch("http://localhost:3000/comments")
