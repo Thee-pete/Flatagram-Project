@@ -3,8 +3,9 @@
     {
       "id": 1,
       "title": "Woofing those bugs away",
-      "likes": 163,
-      "image": "./assets/coder-dog.png"
+      "likes": 57,
+      "image": "https://images.dog.ceo/breeds/hound-ibizan/n02091244_177.jpg"
+
     }
   ],
   "comments": [
@@ -22,6 +23,16 @@
       "id": 3,
       "imageId": 1,
       "content": "Woof!"
+    },
+    {
+      "imageId": 1,
+      "content": "this is cool",
+      "id": 4
+    },
+    {
+      "imageId": 1,
+      "content": "I love to eat",
+      "id": 5
     }
   ]
 }
