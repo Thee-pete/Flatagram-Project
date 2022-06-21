@@ -1,28 +1,24 @@
 
-function updateLikes(){
+
+
+const toggleHeart = () => {
+  const likeButton = document.querySelector("#like-button")
     
-    fetch ("http://localhost:3000/images/1")
-    .then(resp => resp.json())
-    .then(data => {
-       
-        document.getElementById('like-button').addEventListener('click', ()=> {
-    
-            data.likes +=1 
-
-            document.getElementById('like-count').textContent = data.likes
-        
-            fetch  ("http://localhost:3000/images/1", {
-            method: 'PATCH',
-            headers: {
-                'Content-Type' : 'application/json'
-            },
-            body: JSON.stringify({
-                "likes" : data.likes
-            })
-
-        })
-    })
-})
-
+  likeButton.addEventListener("click", (event)  =>{
+ if(likeButton.textContent === "♥"){
+    likeButton.textContent = "♡"
+ } else {
+    likeButton.textContent = "♥";
+    likeCounter();
+ }
+ })
 }
-updateLikes();
+
+let n=0
+const likeCounter = () => {
+ const   likeCount = document.querySelector("#like-count");
+ n++;
+ likeCount.textContent = `${n} likes`
+}
+
+toggleHeart();
