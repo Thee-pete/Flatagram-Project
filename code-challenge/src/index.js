@@ -14,13 +14,13 @@ function displayImageAndDetails(){
     .then(data => renderImageAndDetails(data))
     return imageDetails
 }
-displayImageAndDetails()
+displayImageAndDetails() 
 
 
 function renderImageAndDetails(imageDetails){
         imgTitle.textContent = imageDetails.title;
         imgSrc.src = imageDetails.image;
-        imgLikesCount.textContent =imageDetails.likes;
+        imgLikesCount.textContent =`${imageDetails.likes} likes`;
         fetchComments(imageDetails.comments);
      
         
@@ -77,9 +77,6 @@ function changeDog(){
     })
 }
 changeDog()
-
-
-
 
 
 
